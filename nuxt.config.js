@@ -38,7 +38,7 @@ export default {
   plugins: [
     '@/plugins/element-ui',
     '@/plugins/api',
-    // '@/plugins/flex'
+    '@/plugins/scrollto'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -54,7 +54,10 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources' // 添加style-resource模块
+    '@nuxtjs/style-resources', // 添加style-resource模块
+    'vue-scrollto/nuxt',
+    // Or if you have custom options...
+    ['vue-scrollto/nuxt', { duration: 300 }],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
