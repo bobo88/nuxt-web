@@ -1,0 +1,39 @@
+@import "../assets/base/common"; /* 通用ui */
+@media screen and (min-width: 641px) and (min-device-width: 641px){
+  body {
+    background: #f7f7f7;
+  }
+  .todo-title {
+    font-size: 32px;
+    height:40px;
+    line-height:40px;
+    color: #f60;
+    text-align: center;
+  }
+  .todo-desc {
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .beauty-image {
+    .carousel-box {
+      margin: 0 auto;
+      width: 300px;
+      height: 300px;
+      .el-carousel__container, .el-carousel__item {
+        display: block;
+        width: 300px;
+        height: 300px;
+      }
+    }
+    img {
+      width: 300px;
+      height: 300px;
+      vertical-align: top;
+    }
+  }
+  .beauty-tit {
+    font-size: 20px;
+  }
+}

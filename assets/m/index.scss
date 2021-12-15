@@ -1,0 +1,38 @@
+@media screen and (max-width: 640px) and (max-device-width: 640px) {
+  body {
+    background: rgb(234, 246, 250);
+  }
+  .todo-title {
+    font-size: 32px;
+    height: 80px;
+    line-height: 80px;
+    color: #069;
+    text-align: center;
+  }
+  .todo-desc {
+    font-size: 28px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .beauty-image {
+    .carousel-box {
+      margin: 0 auto;
+      width: 500px;
+      height: 500px;
+      .el-carousel__container, .el-carousel__item {
+        display: block;
+        width: 500px;
+        height: 500px;
+      }
+    }
+    img {
+      width: 500px;
+      height: 500px;
+      vertical-align: top;
+    }
+  }
+  .beauty-tit {
+    font-size: 32px;
+  }
+}

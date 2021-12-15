@@ -1,0 +1,60 @@
+/* 定义sass变量 */
+$mainColor: #001529;
+$mainFontColor: #ed265d;
+$subColor: #2e324b;
+
+$colorF: #fff;
+$colorC: #ccc;
+$colorD: #ddd;
+$color0: #000;
+$color3: #333;
+$color6: #666;
+$color9: #999;
+$colorRed: #f00;
+
+$bgF: #fff;
+$bgC: #ccc;
+$bgD: #ddd;
+$bg0: #000;
+$bg3: #333;
+$bg6: #666;
+$bg9: #999;
+
+/* 深颜色 */
+$colorBlue: #038FFF;
+$bgMainColor: #001529;
+$bgColorF: #fff;
+$bgColorBlue: #E5F6FF;
+$bgPlusBlue: #1890FF;
+
+/* 变量： 主背景颜色等 */
+$bgColor: var(--bgColor, #001529);
+$bgDeepDarkColor: var(--bgColor, #1f1f1f);
+$bgDeepDarkColorAssist: var(--bgColor, #141414);
+$bgColorAssist: var(--bgColorAssist, #fff);
+$fontColor: var(--fontColor, #fff);
+$fontColorDeepDark: var(--fontColor, rgba(255, 255, 255, 0.85));
+$themeColor: var(--themeColor, #038FFF);
+$themeColorAssist: var(--themeColorAssist, #E5F6FF);
+$themeColorPlus: var(--themeColor, #1890FF);
+
+/* 变量： 主题色列表 */
+$themeColor_1: var(--themeColor_1, #1890ff);
+$themeColor_2: var(--themeColor_2, #f5212d);
+$themeColor_3: var(--themeColor_3, #fa541b);
+$themeColor_4: var(--themeColor_4, #faad13);
+$themeColor_5: var(--themeColor_5, #17c2c2);
+$themeColor_6: var(--themeColor_6, #53c519);
+$themeColor_7: var(--themeColor_7, #2f54ea);
+$themeColor_8: var(--themeColor_8, #722ed1);
+/* document.getElementsByTagName('body')[0].style.setProperty('--testColor', '#fff'); */
+/* 其他 */
+$btnColorSuccess: #67C23A;
+$btnColorSuccessHover: #85ce61;
+$btnColorWarning: #E6A23C;
+$btnColorWarningHover: #ebb563;
+$btnColorDanger: #F56C6C;
+$btnColorDangerHover: #f78989;
+$btnColorInfo: #909399;
+$btnColorInfoHover: #a6a9ad;
+
