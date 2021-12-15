@@ -1,2 +1,28 @@
 @import "base/common"; /* 通用ui */
 @import "m/index.scss"; /* 通用ui */
+
+.fadeInLeft-enter-active,
+.fadeInLeft-leave-active {
+  opacity   : 1;
+  transform : translate3d(0, 0, 0);
+  transition: all 0.5s ease;
+}
+
+.fadeInLeft-enter,
+.fadeInLeft-leave-to {
+  opacity  : 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.fadeInRight-enter-active,
+.fadeInRight-leave-active {
+  opacity   : 1;
+  transform : translate3d(0, 0, 0);
+  transition: all 0.5s ease;
+}
+
+.fadeInRight-enter,
+.fadeInRight-leave-to {
+  opacity  : 0;
+  transform: translate3d(100%, 0, 0);
+}

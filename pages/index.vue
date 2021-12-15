@@ -1,8 +1,8 @@
 <template>
   <div>
     <transition name="fade">
-      <div v-if="!isHidden" class="first-box">
-        <h1 class="todo-title mb20">
+      <div v-show="!isHidden" class="first-box">
+        <h1 class="todo-title">
           <el-button :type="USER_AGENT === 1 ? 'primary' : 'success'" class="w100Percent vt">Nuxt官网适配 - PC/移动端</el-button>
         </h1>
 
@@ -11,7 +11,12 @@
         <p class="mb30 pr20 pl20 tc f18 color-info">apiData: {{ apiData }}</p>
 
         <div class="beauty-image tc">
-          <p class="beauty-tit color-warning mb20">要想访问量好，封面吸引少不了！</p>
+          <div id="js-transBox" class="trans-box mb30">
+            <transition name="fadeInLeft">
+              <p v-show="isTrans" class="beauty-tit color-warning">要想访问量好，封面吸引少不了！（我有动画）</p>
+            </transition>
+          </div>
+          <!-- 走马灯 -->
           <el-carousel trigger="click" class="carousel-box" indicator-position="none">
             <el-carousel-item v-for="item in 4" :key="item">
               <el-image class="box-radius" :src="require('~/assets/images/beauty_' + item + '.png')"></el-image>
@@ -54,6 +59,8 @@ export default {
     }
   },
   data: () => ({
+    // isTrans标签：页面滑动 - 触发动画效果
+    isTrans: true,
     loading: false,
     isMobile: false,
     // 切换到 “第二屏” 时是否隐藏 “第一屏”
@@ -95,9 +102,12 @@ export default {
     this.$nextTick(function () {
       this.onScroll()
     })
-    window.onscroll = this.debounce(this.onScroll, 100)
+    this.scrollInit(0)
   },
   methods: {
+    scrollInit (delay) {
+      window.onscroll = this.debounce(this.onScroll, delay)
+    },
     start () {
       this.loading = true
     },
@@ -126,17 +136,21 @@ export default {
     onScroll () {
       console.log('scroll......')
       const secondBox = document.getElementById('js-secondBox')
+      const transBox = document.getElementById('js-transBox')
       // 获取当前页面滚动条纵坐标的位置
       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
       // 获取 "第二屏" 页面距离顶部的位置
       const secondBoxTop = secondBox.offsetTop
+      const transBoxTop = transBox.offsetTop
       // 获取 浏览器/设备 的屏幕高度
       const windowH = window.innerHeight
       console.log(scrollTop, secondBoxTop, windowH)
       // 临界点 - 1：“第二屏” 刚好要展示出来，scrollTop > secondBoxTop - windowH。
       // 临界点 - 2：当 “第二屏” 展示出来超过 30% 时，“设定时间” 内全部展示 “第二屏”，否则 “设定时间” 内展示 “第一屏” 底部（用户再次滑动依然执行此机制）。
       // 公式：  scrollTop - (secondBoxTop - windowH) > windowH * 0.3
+      // 备注： 0.3 属于自定义数值（可根据实际情况 调大 / 调小）
       if (scrollTop - (secondBoxTop - windowH) > windowH * 0.3) {
+        this.scrollInit(100)
         console.log('临界点 - 2')
         this.$scrollTo(secondBox, 0, {
           offset: secondBoxTop
@@ -146,12 +160,15 @@ export default {
           this.hiddenFirstFlag ? (this.isHidden = true) : (this.isHidden = false)
         }, 500)
       } else if (scrollTop - (secondBoxTop - windowH) > 0) {
+        this.scrollInit(100)
         console.log('------ 11 ------')
         this.$scrollTo(document, 0, {
           offset: secondBoxTop - windowH
         })
       } else {
-        console.log('------ 22 -----')
+        this.scrollInit(0)
+        scrollTop > transBoxTop - 50 ? (this.isTrans = false) : (this.isTrans = true)
+        console.log(scrollTop, transBoxTop, '------ 22 -----')
       }
     }
   }

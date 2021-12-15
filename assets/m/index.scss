@@ -3,9 +3,10 @@
     background: rgb(234, 246, 250);
   }
   .todo-title {
-    font-size: 32px;
+    margin-bottom: 200px;
     height: 80px;
     line-height: 80px;
+    font-size: 32px;
     color: #069;
     text-align: center;
   }
@@ -32,7 +33,12 @@
       vertical-align: top;
     }
   }
+  .trans-box {
+    height: 50px;
+  }
   .beauty-tit {
+    height: 50px;
+    line-height: 50px;
     font-size: 32px;
   }
 
