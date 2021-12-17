@@ -10,6 +10,12 @@
 
         <p class="mb30 pr20 pl20 tc f18 color-info">apiData: {{ apiData }}</p>
 
+        <div class="video-box-bg mb30">
+          <div class="video-box">
+            <p class="video-item">模拟视频</p>
+          </div>
+        </div>
+
         <div class="beauty-image tc">
           <div id="js-transBox" class="trans-box mb30">
             <transition name="fadeInLeft">

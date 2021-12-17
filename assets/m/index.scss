@@ -41,6 +41,33 @@
     line-height: 50px;
     font-size: 32px;
   }
+  .video-box-bg {
+    padding: 100px 0;
+    background: #060425;
+  }
+  .video-box {
+    position: relative;
+    z-index: 1;
+    width: 576px;
+    height: 754px;
+    background: url('@/assets/images/v.png') center center no-repeat;
+    background-size: 576px 754px;
+    .video-item {
+      position: absolute;
+      z-index: 9;
+      top: 25px;
+      left: 185px;
+      width: 238px;
+      height: 499px;
+      line-height: 499px;
+      color: #000;
+      font-size: 30px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.6);
+      transform: rotate(9.25deg);
+      border-radius: 30px;
+    }
+  }
 
   /* 第二页 */
   .second-box {
