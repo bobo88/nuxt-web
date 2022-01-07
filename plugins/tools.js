@@ -35,6 +35,7 @@ Vue.prototype.$shareTo = (type, url) => {
     'text=', // Twitter
     ''
   ]
+  const USER_INFO = 'web_id7039267589202150918'
   // URL 拼接返回
-  return sharePrefix[type] + '?' + shareSuffix[type] + encodeURIComponentURL + (extraParameters[type] ? '&' + (extraParameters[type] + encodeURIComponentURL) : '')
+  return sharePrefix[type] + '?' + shareSuffix[type] + encodeURIComponentURL + '&' + USER_INFO + (extraParameters[type] ? '&' + (extraParameters[type] + encodeURIComponentURL) : '')
 }
