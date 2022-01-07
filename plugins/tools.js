@@ -2,13 +2,14 @@ import Vue from 'vue'
 
 /**
  *
- * @param {*} type
- * 1 - Facebook， 2 - Reddit， 3 - Pinterest， 4 - Twitter， 5 - WhatsApp
  * 分享封装函数
- * @returns URL
+ * @param {*} type
+ * type： 1 - Facebook， 2 - Reddit， 3 - Pinterest， 4 - Twitter， 5 - WhatsApp
+ * @param {*} url
+ * url: 需要分享出去的地址URL
+ * @returns URL （拼接后的地址）
  */
 Vue.prototype.$shareTo = (type, url) => {
-  console.log(type)
   const encodeURIComponentURL = encodeURIComponent(url)
   const sharePrefix = [
     '',
