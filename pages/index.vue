@@ -8,20 +8,8 @@
 
         <div class="share-box tc mb30">
           <ul>
-            <li class="inline-block">
-              <el-button size="mini" type="primary" @click="shareTo(1)">FB</el-button>
-            </li>
-            <li class="inline-block">
-              <el-button size="mini" type="success" @click="shareTo(2)">Reddit</el-button>
-            </li>
-            <li class="inline-block">
-              <el-button size="mini" type="info" @click="shareTo(3)">Pin</el-button>
-            </li>
-            <li class="inline-block">
-              <el-button size="mini" type="warning" @click="shareTo(4)">TW</el-button>
-            </li>
-            <li class="inline-block">
-              <el-button size="mini" type="danger" @click="shareTo(5)">WhatsApp</el-button>
+            <li class="inline-block mr10" v-for="(item, index) in btnTextArr" :key="item">
+              <el-button size="mini" :type="btnTypeArr[index]" @click="shareTo(index + 1)">{{ item }}</el-button>
             </li>
           </ul>
         </div>
@@ -93,7 +81,9 @@ export default {
     hiddenFirstFlag: true,
     // “第一屏” 默认展示
     isHidden: false,
-    events: 'bbb'
+    events: 'bbb',
+    btnTypeArr: ['primary', 'success', 'info', 'warning', 'danger'],
+    btnTextArr: ['FB', 'Reddit', 'Pin', 'TW', 'WhatsApp']
   }),
   fetch (context) {
     console.log('fetch----------', context.USER_AGENT, this.isMobile)
