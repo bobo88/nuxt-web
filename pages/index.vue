@@ -6,6 +6,26 @@
           <el-button :type="USER_AGENT === 1 ? 'primary' : 'success'" class="w100Percent vt">Nuxt官网适配 - PC/移动端</el-button>
         </h1>
 
+        <div class="share-box tc mb30">
+          <ul>
+            <li class="inline-block">
+              <el-button size="mini" type="primary" @click="shareTo(1)">FB</el-button>
+            </li>
+            <li class="inline-block">
+              <el-button size="mini" type="success" @click="shareTo(2)">Reddit</el-button>
+            </li>
+            <li class="inline-block">
+              <el-button size="mini" type="info" @click="shareTo(3)">Pin</el-button>
+            </li>
+            <li class="inline-block">
+              <el-button size="mini" type="warning" @click="shareTo(4)">TW</el-button>
+            </li>
+            <li class="inline-block">
+              <el-button size="mini" type="danger" @click="shareTo(5)">WhatsApp</el-button>
+            </li>
+          </ul>
+        </div>
+
         <h3 class="todo-desc mb30">当前设备判定为： <span class="color-danger fb">{{ USER_AGENT === 1 ? 'PC端' : 'M端/移动端' }}</span></h3>
 
         <p class="mb30 pr20 pl20 tc f18 color-info">apiData: {{ apiData }}</p>
@@ -111,6 +131,12 @@ export default {
     this.scrollInit(0)
   },
   methods: {
+    shareTo (type) {
+      console.log('Type: ', type)
+      // console.log(this.$shareTo(type))
+      const shareUrl = this.$shareTo(type, 'https://activity.vskit.tv/checkin/index.html')
+      window.open(shareUrl, '_blank')
+    },
     scrollInit (delay) {
       window.onscroll = this.debounce(this.onScroll, delay)
     },

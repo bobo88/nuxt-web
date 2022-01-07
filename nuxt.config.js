@@ -38,7 +38,8 @@ export default {
   plugins: [
     '@/plugins/element-ui',
     '@/plugins/api',
-    '@/plugins/scrollto'
+    '@/plugins/scrollto',
+    '@/plugins/tools'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

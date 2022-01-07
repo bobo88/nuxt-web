@@ -38,3 +38,14 @@
 //   //   offset: secondBoxTop - windowH
 //   // })
 // },
+
+// <!-- https://www.facebook.com/sharer/sharer.php    ?app_id=113869198637480&display=popup&sdk=joey&u=https://www.tiktok.com/@happy_videos_follow/video/7045881112307977519?is_from_webapp=1&sender_device=pc&web_id7039267589202150918 -->
+// <li>Share to Facebook</li>
+// <!-- https://www.reddit.com/submit                   ?url=https://www.tiktok.com/@happy_videos_follow/video/7045881112307977519?is_from_webapp=1&sender_device=pc&web_id7039267589202150918 -->
+// <li>Share to Reddit</li>
+// <!-- https://www.pinterest.com/pin/create/button/    ?desc=https://www.tiktok.com/@happy_videos_follow/video/7045881112307977519?is_from_webapp=1&sender_device=pc&web_id7039267589202150918&media=https://lf16-tiktok-web.ttwstatic.com/obj/tiktok-web-common-sg/mtact/static/images/share_img.png`&url=https://www.tiktok.com/@happy_videos_follow/video/7045881112307977519?is_from_webapp=1&sender_device=pc&web_id7039267589202150918 -->
+// <li>Share to Pinterest</li>
+// <!-- https://twitter.com/intent/tweet                ?refer_source=https://www.tiktok.com/@happy_videos_follow/video/7045881112307977519?is_from_webapp=1&sender_device=pc&web_id7039267589202150918&text=https://www.tiktok.com/@happy_videos_follow/video/7045881112307977519?is_from_webapp=1&sender_device=pc&web_id7039267589202150918 -->
+// <li>Share to Twitter</li>
+// <!-- https://api.whatsapp.com/send/                  ?phone&text=https://www.tiktok.com/@happy_videos_follow/video/7045881112307977519?is_from_webapp=1&sender_device=pc&web_id7039267589202150918&app_absent=0 -->
+// <li>Share to WhatsApp</li>
