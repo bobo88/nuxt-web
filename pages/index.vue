@@ -156,7 +156,7 @@ export default {
       }
     },
     onScroll () {
-      console.log('scroll......')
+      // console.log('scroll......')
       const secondBox = document.getElementById('js-secondBox')
       const transBox = document.getElementById('js-transBox')
       // 获取当前页面滚动条纵坐标的位置
