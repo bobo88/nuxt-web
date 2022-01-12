@@ -25,5 +25,4 @@ jobs:
     - name: Build
       run: |
         node -v
-        npm i
-        npm run generate
+        npm -v
